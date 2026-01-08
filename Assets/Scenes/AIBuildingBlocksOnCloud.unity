@@ -679,7 +679,7 @@ GameObject:
   - component: {fileID: 642352543}
   - component: {fileID: 642352542}
   - component: {fileID: 642352541}
-  - component: {fileID: 642352540}
+  - component: {fileID: 642352544}
   - component: {fileID: 642352539}
   - component: {fileID: 642352538}
   m_Layer: 0
@@ -717,20 +717,6 @@ MonoBehaviour:
   _removeHands: 0
   CustomTrackingSpace: {fileID: 0}
   <MaskMeshFilters>k__BackingField: []
---- !u!114 &642352540
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 642352537}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b48c38ab0b17f4243a02271e64b25ccd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  boundingBoxPrefab: {fileID: 8066889808755201971, guid: 46d0b28dd34412b4c90c82205d36db4f, type: 3}
-  showBoundingBoxes: 1
 --- !u!114 &642352541
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -790,6 +776,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &642352544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 642352537}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8d6ad98ff9a9264fa87bf7ca19ff093, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectDetectionVisualizerV2
+  boundingBoxPrefab: {fileID: 8066889808755201971, guid: 46d0b28dd34412b4c90c82205d36db4f, type: 3}
+  showBoundingBoxes: 1
 --- !u!1 &834818183
 GameObject:
   m_ObjectHideFlags: 0
