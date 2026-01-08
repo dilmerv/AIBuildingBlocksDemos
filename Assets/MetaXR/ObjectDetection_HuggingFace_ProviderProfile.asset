@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: ObjectDetection_HuggingFace_ProviderProfile
   m_EditorClassIdentifier: Meta.XR.BuildingBlocks.AIBlocks::Meta.XR.BuildingBlocks.AIBlocks.HuggingFaceProvider
   supportedInferenceTypes: 1
-  apiKey: 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
+  apiKey: 
   modelId: facebook/detr-resnet-101
   endpoint: https://router.huggingface.co/hf-inference/models/facebook/detr-resnet-101
   supportsVision: 1
