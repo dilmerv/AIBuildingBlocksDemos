@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ee0a5db7462b764094b0d8e02abcb8a, type: 3}
+  m_Name: ObjectDetection_UnityInferenceEngine_ProviderProfile
+  m_EditorClassIdentifier: Meta.XR.BuildingBlocks.AIBlocks::Meta.XR.BuildingBlocks.AIBlocks.UnityInferenceEngineProvider
+  supportedInferenceTypes: 4
+  modelFile: {fileID: 5022602860645237092, guid: a690bcf83c34ded409d6f7b056c0ec77, type: 3}
+  modelContentId: 24801439399478345
+  classLabelsContentId: 9983996451722044
+  backend: 256
+  classLabelsAsset: {fileID: 4900000, guid: 46ea73dc4a34705459b4d4dc68f52d10, type: 3}
+  splitOverFrames: 1
+  layersPerFrame: 22
+  inputWidth: 640
+  inputHeight: 640
+  nmsShader: {fileID: 7200000, guid: 28ac39a8e5009184d838d8e8c444bd6d, type: 3}
+  maxDetections: 100
