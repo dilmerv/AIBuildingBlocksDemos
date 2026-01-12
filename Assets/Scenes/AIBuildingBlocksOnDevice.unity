@@ -681,7 +681,7 @@ GameObject:
   - component: {fileID: 642352541}
   - component: {fileID: 642352544}
   - component: {fileID: 642352539}
-  - component: {fileID: 642352538}
+  - component: {fileID: 642352545}
   m_Layer: 0
   m_Name: '[BuildingBlock] Object Detection'
   m_TagString: Untagged
@@ -689,18 +689,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &642352538
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 642352537}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d6b96759ad368794da78dff0b7f67f0e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &642352539
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -790,6 +778,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ObjectDetectionVisualizerV2
   boundingBoxPrefab: {fileID: 8066889808755201971, guid: 46d0b28dd34412b4c90c82205d36db4f, type: 3}
   showBoundingBoxes: 1
+--- !u!114 &642352545
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 642352537}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6b96759ad368794da78dff0b7f67f0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Meta.XR.BuildingBlocks.AIBlocks::Meta.XR.BuildingBlocks.AIBlocks.DepthTextureAccess
 --- !u!1001 &712530755
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -801,6 +801,10 @@ PrefabInstance:
     - target: {fileID: 2972034178652719811, guid: fce8050c0e00b6e4f8f1069077f19f9e, type: 3}
       propertyPath: m_Name
       value: Object Detection Metrics
+      objectReference: {fileID: 0}
+    - target: {fileID: 2972034178652719811, guid: fce8050c0e00b6e4f8f1069077f19f9e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4093553698953177998, guid: fce8050c0e00b6e4f8f1069077f19f9e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -841,6 +845,10 @@ PrefabInstance:
     - target: {fileID: 4093553698953177998, guid: fce8050c0e00b6e4f8f1069077f19f9e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5781556783681422293, guid: fce8050c0e00b6e4f8f1069077f19f9e, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5781556783681422293, guid: fce8050c0e00b6e4f8f1069077f19f9e, type: 3}
       propertyPath: objectDetectionAgent

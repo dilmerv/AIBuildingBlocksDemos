@@ -157,52 +157,72 @@ public class ObjectDetectionVisualizerV2 : MonoBehaviour
         Debug.Log($"[ObjectDetectionVisualizer] Successfully projected {projected}/{batch.Count} detections. Created {_live.Count} GameObjects.");
     }
     
-    public bool TryProject(float xmin, float ymin, float xmax, float ymax,
-        out Vector3 world, out Quaternion rot, out Vector3 scale)
+     public bool TryProject(float xmin, float ymin, float xmax, float ymax,
+            out Vector3 world, out Quaternion rot, out Vector3 scale)
     {
         world = default;
         rot = default;
         scale = default;
 
-        // Get the source texture resolution (what the detection used)
-        var srcWidth = (float)_cam.GetTexture().width;
-        var srcHeight = (float)_cam.GetTexture().height;
-    
-        // Get the sensor resolution (what the intrinsics are calibrated for)
-        var sensorWidth = (float)_frame.CameraIntrinsics.SensorResolution.x;
-        var sensorHeight = (float)_frame.CameraIntrinsics.SensorResolution.y;
-    
-        // Scale bounding box from texture coords to sensor coords
-        float scaleX = sensorWidth / srcWidth;
-        float scaleY = sensorHeight / srcHeight;
+        var cameraTexture = _cam.GetTexture();
+        if (cameraTexture == null)
+        {
+            return false;
+        }
 
-        var px = ((xmin + xmax) * 0.5f) * scaleX;
-        var py = ((ymin + ymax) * 0.5f) * scaleY;
+        var px = (xmin + xmax) * 0.5f;
+        var py = (ymin + ymax) * 0.5f;
 
-        var dirCam = new Vector3(
-            (px - _frame.CameraIntrinsics.PrincipalPoint.x) / _frame.CameraIntrinsics.FocalLength.x,
-            -(py - _frame.CameraIntrinsics.PrincipalPoint.y) / _frame.CameraIntrinsics.FocalLength.y,
-            1f).normalized;
+        var normalizedCenterX = px / cameraTexture.width;
+        var normalizedCenterY = py / cameraTexture.height;
 
-        var world1M = _frame.Pose.position + _frame.Pose.rotation * dirCam;
+        var ray = _cam.ViewportPointToRay(new Vector2(normalizedCenterX, 1.0f - normalizedCenterY), _frame.Pose);
+
+        var world1M = ray.origin + ray.direction;
         var clip = _frame.ViewProjectionMatrix[_eyeIdx] * new Vector4(world1M.x, world1M.y, world1M.z, 1f);
-        if (clip.w <= 0) return false;
+        if (clip.w <= 0)
+        {
+            return false;
+        }
 
         var uv = (new Vector2(clip.x, clip.y) / clip.w) * 0.5f + Vector2.one * 0.5f;
-        const int texSize = DepthTextureAccess.TextureSize;
+
+        if (_depth == null)
+        {
+            return false;
+        }
+
+        var texSize = DepthTextureAccess.TextureSize;
         var sx = Mathf.Clamp((int)(uv.x * texSize), 0, texSize - 1);
         var sy = Mathf.Clamp((int)(uv.y * texSize), 0, texSize - 1);
         var idx = _eyeIdx * texSize * texSize + sy * texSize + sx;
         var d = _frame.Depth[idx];
-        if (d <= 0 || d > 20 || float.IsInfinity(d)) return false;
 
-        world = _frame.Pose.position + _frame.Pose.rotation * (dirCam * d);
+        if (d <= 0 || d > 20 || float.IsInfinity(d))
+        {
+            return false;
+        }
+
+        world = ray.origin + ray.direction * d;
         rot = Quaternion.LookRotation(world - _frame.Pose.position);
-    
-        // Scale bounding box dimensions properly  
-        var w = ((xmax - xmin) * scaleX) / _frame.CameraIntrinsics.FocalLength.x * d;
-        var h = ((ymax - ymin) * scaleY) / _frame.CameraIntrinsics.FocalLength.y * d;
+
+        var normalizedWidth = (xmax - xmin) / cameraTexture.width;
+        var normalizedHeight = (ymax - ymin) / cameraTexture.height;
+
+        var rayLeft = _cam.ViewportPointToRay(new Vector2(normalizedCenterX - normalizedWidth * 0.5f, 1.0f - normalizedCenterY), _frame.Pose);
+        var rayRight = _cam.ViewportPointToRay(new Vector2(normalizedCenterX + normalizedWidth * 0.5f, 1.0f - normalizedCenterY), _frame.Pose);
+        var rayTop = _cam.ViewportPointToRay(new Vector2(normalizedCenterX, 1.0f - (normalizedCenterY - normalizedHeight * 0.5f)), _frame.Pose);
+        var rayBottom = _cam.ViewportPointToRay(new Vector2(normalizedCenterX, 1.0f - (normalizedCenterY + normalizedHeight * 0.5f)), _frame.Pose);
+
+        var worldLeft = rayLeft.origin + rayLeft.direction * d;
+        var worldRight = rayRight.origin + rayRight.direction * d;
+        var worldTop = rayTop.origin + rayTop.direction * d;
+        var worldBottom = rayBottom.origin + rayBottom.direction * d;
+
+        var w = Vector3.Distance(worldLeft, worldRight);
+        var h = Vector3.Distance(worldTop, worldBottom);
         scale = new Vector3(w, h, 1f);
+
         return true;
     }
 
