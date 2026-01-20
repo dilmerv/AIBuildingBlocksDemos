@@ -12,7 +12,7 @@
     <meta-data android:name="unityplayer.SkipPermissionsDialog" android:value="false" />
     <meta-data android:name="com.oculus.ossplash.background" android:value="passthrough-contextual" />
     <meta-data android:name="com.oculus.telemetry.project_guid" android:value="88e0cdc0-b150-4ef0-94d3-aef9b3bc1cbe" />
-    <meta-data android:name="com.oculus.supportedDevices" android:value="quest|quest2|questpro|quest3|quest3s" tools:replace="android:value" />
+    <meta-data android:name="com.oculus.supportedDevices" android:value="quest2|questpro|quest3|quest3s" tools:replace="android:value" />
   </application>
   <uses-feature android:name="android.hardware.vr.headtracking" android:version="1" android:required="true" />
   <horizonos:uses-horizonos-sdk horizonos:minSdkVersion="60" horizonos:targetSdkVersion="83" />
@@ -20,4 +20,5 @@
   <uses-feature android:name="com.oculus.feature.PASSTHROUGH" android:required="false" />
   <uses-permission android:name="com.oculus.permission.USE_SCENE" />
   <uses-permission android:name="horizonos.permission.HEADSET_CAMERA" />
+  <uses-feature android:name="oculus.software.overlay_keyboard" android:required="false" />
 </manifest>

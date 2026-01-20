@@ -5,12 +5,18 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/AIBuildingBlocksOnDevice.unity
     guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 0
     path: Assets/Scenes/AIBuildingBlocksOnCloud.unity
     guid: 52df7971ae8c4c949a3f2f63a52de2e6
+  - enabled: 1
+    path: Assets/Scenes/AIBuildingBlocksLLMs.unity
+    guid: 1e66612b93b14421f8204b5c6ed4ad6d
+  - enabled: 0
+    path: "Assets/Samples/Meta XR Interaction \u200BSDK/83.0.1/Example Scenes/UISetExamples.unity"
+    guid: 07e3686372a704147b219707ee3c6f62
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
     com.unity.xr.arfoundation.simulation_settings: {fileID: 11400000, guid: 7576e2f7022d6634b9f2647a709e7a31, type: 2}
