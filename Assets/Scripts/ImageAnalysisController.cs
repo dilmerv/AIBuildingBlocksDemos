@@ -3,8 +3,9 @@ using Meta.XR.BuildingBlocks.AIBlocks;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using Toggle = UnityEngine.UI.Toggle;
 
-public class PassthroughCameraAddOns : MonoBehaviour
+public class ImageAnalysisController : MonoBehaviour
 {
     [SerializeField] private LlmAgent llmAgent;
     [SerializeField] private PassthroughCameraAccess passthroughCameraAccess;
@@ -14,10 +15,11 @@ public class PassthroughCameraAddOns : MonoBehaviour
     [SerializeField] private RawImage liveImage;
     [SerializeField] private RawImage capturedImage;
     [SerializeField] private Toggle captureButton;
-    [SerializeField] private Toggle sendPromptButton;
-    [SerializeField] private TextMeshProUGUI llmResponseText;
+    [SerializeField] private QuestTMPKeyboard promptKeyboardText;
+    [SerializeField] private RectTransform llmResponseScrollView;
     
     private TextMeshProUGUI capturedText;
+    private TextMeshProUGUI llmResponseText;
     private RenderTexture renderTexture;
     private Texture2D capturedFrame;
     private bool capturingInProgress;
@@ -31,7 +33,7 @@ public class PassthroughCameraAddOns : MonoBehaviour
             liveImage.gameObject.SetActive(!value);
             capturedImage.gameObject.SetActive(value);
             capturedText.text = value ? "Clear Capture" : "Capture";
-            sendPromptButton.interactable = value;
+            llmResponseScrollView.gameObject.SetActive(value);
         }
     }
 
@@ -44,8 +46,7 @@ public class PassthroughCameraAddOns : MonoBehaviour
         }
 
         capturedText = captureButton.GetComponentInChildren<TextMeshProUGUI>();
-        llmResponseText.gameObject.SetActive(false);
-        
+        llmResponseText = llmResponseScrollView.GetComponentInChildren<TextMeshProUGUI>();
         CapturingInProgress = false;
         renderTexture = new RenderTexture(1024, 1024, 0);
         renderTexture.Create();
@@ -69,9 +70,10 @@ public class PassthroughCameraAddOns : MonoBehaviour
             }
         });
         
-        sendPromptButton.onValueChanged.AddListener((_) =>
+        llmAgent.onResponseReceived.AddListener(response =>
         {
-            CapturingInProgress = false;
+            llmResponseText.text = response;
+            Debug.Log("Response received: " + response);
         });
     }
     
@@ -127,6 +129,7 @@ public class PassthroughCameraAddOns : MonoBehaviour
         {
             Debug.Log($"[PassthroughCameraAddOns] Frame captured: {capturedFrame.width}x{capturedFrame.height}");
             capturedImage.texture = capturedFrame;
+            _ = llmAgent.SendPromptAsync(promptKeyboardText.KeyboardText, capturedFrame);
         }
     }
     

@@ -12,7 +12,9 @@ public class QuestTMPKeyboard : MonoBehaviour, IPointerDownHandler
 
     private bool keyboardRequested;
     private Coroutine openRoutine;
-
+    
+    public string KeyboardText => inputField.text;
+    
     void Awake()
     {
         inputField = GetComponent<TMP_InputField>();
