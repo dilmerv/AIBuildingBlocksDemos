@@ -14,4 +14,4 @@ This project was created to test the [AI Building Blocks](https://developers.met
 |Feature: Object Detection<br>Scene(s): AIBuildingBlocksOnDevice & AIBuildingBlocksOnCloud|
 |<img src="https://github.com/dilmerv/AIBuildingBlocksDemos/blob/master/Docs/images/AIBuildingBlocks_ObjectDetection.gif" width="560">|
 |Feature: Conversational AI<br>Scene(s): AIBuildingBlocksLLMs|
-|<img src="https://github.com/dilmerv/AIBuildingBlocksDemos/blob/master/Docs/images/AIBuildingBlocks_LargeLanguageModel.gif" width="560">|
+|<img src="https://github.com/dilmerv/AIBuildingBlocksDemos/blob/master/Docs/images/AIBuildingBlocks_LargeLanguageModels.gif" width="560">|
