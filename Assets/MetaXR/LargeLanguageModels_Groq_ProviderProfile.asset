@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: LargeLanguageModels_Groq_ProviderProfile
   m_EditorClassIdentifier: Meta.XR.BuildingBlocks.AIBlocks::Meta.XR.BuildingBlocks.AIBlocks.HuggingFaceProvider
   supportedInferenceTypes: 1
-  apiKey: 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
+  apiKey: 
   modelId: meta-llama/llama-4-scout-17b-16e-instruct
   endpoint: https://api.groq.com/openai/v1/chat/completions
   supportsVision: 1

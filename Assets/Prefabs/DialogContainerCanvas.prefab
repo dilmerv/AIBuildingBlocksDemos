@@ -3640,7 +3640,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _transferOnSecondSelection: 0
   _addNewPointsToFront: 0
-  _forwardElement: {fileID: 0}
+  _forwardElement: {fileID: 2324664237321126895}
   _canvas: {fileID: 6625348289055083325}
 --- !u!1 &8052554630728638742
 GameObject:
