@@ -336,8 +336,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 118332973}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0.0028340362, y: 0.32687798, z: 0.0009834857, w: 0.9450618}
+  m_LocalPosition: {x: -0.22370122, y: 1.1914964, z: 0.2900593}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3201,6 +3201,22 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 185542869627871630, guid: 627847113fd4d42339be4e7a9d6af004, type: 3}
+      propertyPath: m_Color.b
+      value: 0.1792453
+      objectReference: {fileID: 0}
+    - target: {fileID: 185542869627871630, guid: 627847113fd4d42339be4e7a9d6af004, type: 3}
+      propertyPath: m_Color.g
+      value: 0.1792453
+      objectReference: {fileID: 0}
+    - target: {fileID: 185542869627871630, guid: 627847113fd4d42339be4e7a9d6af004, type: 3}
+      propertyPath: m_Color.r
+      value: 0.1792453
+      objectReference: {fileID: 0}
+    - target: {fileID: 185542869627871630, guid: 627847113fd4d42339be4e7a9d6af004, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 447200345046999213, guid: 627847113fd4d42339be4e7a9d6af004, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -3216,6 +3232,22 @@ PrefabInstance:
     - target: {fileID: 447200345046999213, guid: 627847113fd4d42339be4e7a9d6af004, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 580725680684958242, guid: 627847113fd4d42339be4e7a9d6af004, type: 3}
+      propertyPath: m_text
+      value: CAN YOU DESCRIBE WHAT YOU SEE?
+      objectReference: {fileID: 0}
+    - target: {fileID: 580725680684958242, guid: 627847113fd4d42339be4e7a9d6af004, type: 3}
+      propertyPath: m_fontStyle
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 580725680684958242, guid: 627847113fd4d42339be4e7a9d6af004, type: 3}
+      propertyPath: m_fontColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 580725680684958242, guid: 627847113fd4d42339be4e7a9d6af004, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4281479730
       objectReference: {fileID: 0}
     - target: {fileID: 1205695280698996792, guid: 627847113fd4d42339be4e7a9d6af004, type: 3}
       propertyPath: m_AnchorMax.y
@@ -3251,6 +3283,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1650396940371231454, guid: 627847113fd4d42339be4e7a9d6af004, type: 3}
       propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1674504675942702955, guid: 627847113fd4d42339be4e7a9d6af004, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1770457716620320816, guid: 627847113fd4d42339be4e7a9d6af004, type: 3}
@@ -3399,27 +3435,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3914065687011260639, guid: 627847113fd4d42339be4e7a9d6af004, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3914065687011260639, guid: 627847113fd4d42339be4e7a9d6af004, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3914065687011260639, guid: 627847113fd4d42339be4e7a9d6af004, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 368
       objectReference: {fileID: 0}
     - target: {fileID: 3914065687011260639, guid: 627847113fd4d42339be4e7a9d6af004, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 102.5
       objectReference: {fileID: 0}
     - target: {fileID: 3914065687011260639, guid: 627847113fd4d42339be4e7a9d6af004, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 184
       objectReference: {fileID: 0}
     - target: {fileID: 3914065687011260639, guid: 627847113fd4d42339be4e7a9d6af004, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -153.75
       objectReference: {fileID: 0}
     - target: {fileID: 4054610734687248539, guid: 627847113fd4d42339be4e7a9d6af004, type: 3}
       propertyPath: m_AnchorMax.x
@@ -3427,6 +3463,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4054610734687248539, guid: 627847113fd4d42339be4e7a9d6af004, type: 3}
       propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4054610734687248539, guid: 627847113fd4d42339be4e7a9d6af004, type: 3}
+      propertyPath: m_AnchorMin.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4730883733777883783, guid: 627847113fd4d42339be4e7a9d6af004, type: 3}
@@ -3501,9 +3541,36 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6724135739663697946, guid: 627847113fd4d42339be4e7a9d6af004, type: 3}
+      propertyPath: m_Texture
+      value: 
+      objectReference: {fileID: 2800000, guid: ac79d88ca0f464af7bd026fafa7eb160, type: 3}
     - target: {fileID: 6923874480507535627, guid: 627847113fd4d42339be4e7a9d6af004, type: 3}
       propertyPath: _size.y
-      value: 549
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7170486008238513065, guid: 627847113fd4d42339be4e7a9d6af004, type: 3}
+      propertyPath: m_text
+      value: 'The image depicts a cartoon-style scene of a man and a llama sitting
+        on furniture in a living room. The man sits on a white couch wearing a blue
+        jacket over a white shirt, dark pants, and sneakers. He looks at the llama
+        with his right hand raised in a gesture. The llama sits on a chair opposite
+        him, with light-brown fur and a cream-colored belly. Its right arm rests
+        on the chair''s back while its left arm mirrors the man''s gesture. A small
+        table with white objects and a lamp shade are nearby, set against an orange-yellow
+        gradient background.
+
+
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 7170486008238513065, guid: 627847113fd4d42339be4e7a9d6af004, type: 3}
+      propertyPath: m_fontSize
+      value: 16.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7170486008238513065, guid: 627847113fd4d42339be4e7a9d6af004, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 16.9
       objectReference: {fileID: 0}
     - target: {fileID: 7509688234397406339, guid: 627847113fd4d42339be4e7a9d6af004, type: 3}
       propertyPath: m_AnchorMax.x
@@ -3523,7 +3590,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7658093276279323644, guid: 627847113fd4d42339be4e7a9d6af004, type: 3}
       propertyPath: _size.y
-      value: 549
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7690151011608398750, guid: 627847113fd4d42339be4e7a9d6af004, type: 3}
+      propertyPath: m_text
+      value: CAPTURE
+      objectReference: {fileID: 0}
+    - target: {fileID: 7690151011608398750, guid: 627847113fd4d42339be4e7a9d6af004, type: 3}
+      propertyPath: m_fontSize
+      value: 22.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 7690151011608398750, guid: 627847113fd4d42339be4e7a9d6af004, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 22.08
       objectReference: {fileID: 0}
     - target: {fileID: 7734996552189613540, guid: 627847113fd4d42339be4e7a9d6af004, type: 3}
       propertyPath: m_AnchorMax.y

@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8ee0a5db7462b764094b0d8e02abcb8a, type: 3}
-  m_Name: ObjectDetection_UnityInferenceEngine_ProviderProfile
+  m_Name: ObjectDetection_UnityInferenceEngine_Provider
   m_EditorClassIdentifier: Meta.XR.BuildingBlocks.AIBlocks::Meta.XR.BuildingBlocks.AIBlocks.UnityInferenceEngineProvider
   supportedInferenceTypes: 4
   modelFile: {fileID: 5022602860645237092, guid: a690bcf83c34ded409d6f7b056c0ec77, type: 3}

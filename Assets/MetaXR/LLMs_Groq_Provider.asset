@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 59b646de05b644ccda42c569c879893c, type: 3}
-  m_Name: ObjectDetection_HuggingFace_ProviderProfile
+  m_Name: LLMs_Groq_Provider
   m_EditorClassIdentifier: Meta.XR.BuildingBlocks.AIBlocks::Meta.XR.BuildingBlocks.AIBlocks.HuggingFaceProvider
   supportedInferenceTypes: 1
   apiKey: 
-  modelId: facebook/detr-resnet-101
-  endpoint: https://router.huggingface.co/hf-inference/models/facebook/detr-resnet-101
+  modelId: meta-llama/llama-4-scout-17b-16e-instruct
+  endpoint: https://api.groq.com/openai/v1/chat/completions
   supportsVision: 1
   inlineRemoteImages: 1
   resolveRemoteRedirects: 1

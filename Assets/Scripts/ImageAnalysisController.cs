@@ -10,7 +10,6 @@ public class ImageAnalysisController : MonoBehaviour
     [SerializeField] private LlmAgent llmAgent;
     [SerializeField] private PassthroughCameraAccess passthroughCameraAccess;
     
-    // UI Bindings
     [Header("UI Bindings")]
     [SerializeField] private RawImage liveImage;
     [SerializeField] private RawImage capturedImage;

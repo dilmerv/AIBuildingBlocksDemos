@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b09a51a23f4ff4e3a83cce6c1908a2cc, type: 3}
+  m_Name: LLMs_OpenAI_Provider
+  m_EditorClassIdentifier: Meta.XR.BuildingBlocks.AIBlocks::Meta.XR.BuildingBlocks.AIBlocks.OpenAIProvider
+  supportedInferenceTypes: 0
+  apiKey: 
+  apiRoot: https://api.openai.com/v1
+  model: gpt-4.1-mini
+  supportsVision: 1
+  inlineRemoteImages: 1
+  resolveRemoteRedirects: 1
+  maxInlineBytes: 26214400
+  sttResponseFormat: json
+  sttLanguage: 
+  sttTemperature: 0
+  ttsVoice: alloy
+  ttsOutputFormat: mp3
+  ttsSpeed: 1
+  ttsInstructions: 
