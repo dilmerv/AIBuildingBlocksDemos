@@ -336,8 +336,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 118332973}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.0028340362, y: 0.32687798, z: 0.0009834857, w: 0.9450618}
-  m_LocalPosition: {x: -0.22370122, y: 1.1914964, z: 0.2900593}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3235,19 +3235,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 580725680684958242, guid: 627847113fd4d42339be4e7a9d6af004, type: 3}
       propertyPath: m_text
-      value: CAN YOU DESCRIBE WHAT YOU SEE?
+      value: ENTER YOUR AI PROMPT...
       objectReference: {fileID: 0}
     - target: {fileID: 580725680684958242, guid: 627847113fd4d42339be4e7a9d6af004, type: 3}
       propertyPath: m_fontStyle
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 580725680684958242, guid: 627847113fd4d42339be4e7a9d6af004, type: 3}
-      propertyPath: m_fontColor.a
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 580725680684958242, guid: 627847113fd4d42339be4e7a9d6af004, type: 3}
+      propertyPath: m_fontColor.a
+      value: 0.78039217
+      objectReference: {fileID: 0}
+    - target: {fileID: 580725680684958242, guid: 627847113fd4d42339be4e7a9d6af004, type: 3}
       propertyPath: m_fontColor32.rgba
-      value: 4281479730
+      value: 3341955634
       objectReference: {fileID: 0}
     - target: {fileID: 1205695280698996792, guid: 627847113fd4d42339be4e7a9d6af004, type: 3}
       propertyPath: m_AnchorMax.y

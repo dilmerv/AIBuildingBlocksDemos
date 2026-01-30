@@ -46,6 +46,7 @@ public class ImageAnalysisController : MonoBehaviour
 
         capturedText = captureButton.GetComponentInChildren<TextMeshProUGUI>();
         llmResponseText = llmResponseScrollView.GetComponentInChildren<TextMeshProUGUI>();
+        llmResponseText.text = string.Empty;
         CapturingInProgress = false;
         renderTexture = new RenderTexture(1024, 1024, 0);
         renderTexture.Create();
