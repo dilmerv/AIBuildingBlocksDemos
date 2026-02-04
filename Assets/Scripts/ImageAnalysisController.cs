@@ -17,6 +17,9 @@ public class ImageAnalysisController : MonoBehaviour
     [SerializeField] private QuestTMPKeyboard promptKeyboardText;
     [SerializeField] private RectTransform llmResponseScrollView;
     
+    [Header("TTS & STT Bindings")]
+    [SerializeField] private TextToSpeechAgent ttsAgent;
+    
     private TextMeshProUGUI capturedText;
     private TextMeshProUGUI llmResponseText;
     private RenderTexture renderTexture;
@@ -74,6 +77,23 @@ public class ImageAnalysisController : MonoBehaviour
         {
             llmResponseText.text = response;
             Debug.Log("Response received: " + response);
+            
+            ttsAgent.SpeakText(response);
+            
+            ttsAgent.onClipReady.AddListener(clip =>
+            {
+                Debug.Log("onClipReady");
+            });
+            
+            ttsAgent.onSpeakStarting.AddListener(clip =>
+            {
+                Debug.Log("onSpeakStarting");
+            });
+            
+            ttsAgent.onSpeakFinished.AddListener(() => 
+            {
+                Debug.Log("onSpeakFinished");
+            });
         });
     }
     
