@@ -14,5 +14,5 @@ This project was created to test the [AI Building Blocks](https://developers.met
 |<img src="https://github.com/dilmerv/AIBuildingBlocksDemos/blob/master/Docs/images/AIBuildingBlocks_ObjectDetection.gif" width="560">|
 |Feature: Conversational AI (LLM)<br>Scene(s): AIBuildingBlocksLLMs|
 |<img src="https://github.com/dilmerv/AIBuildingBlocksDemos/blob/master/Docs/images/AIBuildingBlocks_LargeLanguageModels.gif" width="560">|
-|Feature: Text-To-Speech (TTS)<br>Scene(s): AIBuildingBlocksTTS<br>🔊 Test TTS Audio: [▶️](https://github.com/dilmerv/AIBuildingBlocksDemos/blob/master/Docs/audio/TTS_Demo_1.mp3)|
+|Feature: Text-To-Speech (TTS)<br>Scene(s): AIBuildingBlocksTTS<br>🔊 [Test TTS Audio](https://github.com/user-attachments/files/25118543/TTS_Demo_1.mp3)|
 |<img src="https://github.com/dilmerv/AIBuildingBlocksDemos/blob/master/Docs/images/AIBuildingBlocks_TextToSpeech.gif" width="560">|
